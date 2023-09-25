@@ -3,6 +3,7 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 module.exports = {
+  pathPrefix: "/TestSite",
   siteMetadata: {
     title: data.SiteTitle,
     description: data.SiteDescription,
@@ -77,13 +78,13 @@ module.exports = {
       },
     },
     // https://www.gatsbyjs.org/packages/gatsby-plugin-google-analytics/
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-          trackingId: process.env.GATSBY_GOOGLE_ANALYTICS,
-          head: true,
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //       trackingId: process.env.GATSBY_GOOGLE_ANALYTICS,
+    //       head: true,
+    //   },
+    // },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
