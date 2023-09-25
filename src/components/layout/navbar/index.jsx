@@ -23,8 +23,8 @@ const Navbar = ({ siteTitle }) => (
               <li><Link to="/education" className="lined-link" activeClassName="active"> <BookOpen /> <span> Education </span> </Link></li>  
               <li><Link to="/works" className="lined-link" activeClassName="active"> <Briefcase /> <span> Experience </span> </Link></li>  
               <li><Link to="/repositories" className="lined-link" activeClassName="active"> <Code /> <span> Projects </span> </Link></li>  
-              <li><a href="https://www.github.com/astuary" className="lined-link" activeClassName="active"> <GitHub /> <span> Github </span> </a></li>  
-              <li><a href="https://www.linkedin.com/in/kunjal-panchal" className="lined-link" activeClassName="active"> <Linkedin /> <span> LinkedIn </span> </a></li>  
+              <li><a target="_blank" href="https://www.github.com/astuary" className="lined-link" activeClassName="active"> <GitHub /> <span> Github </span> </a></li>  
+              <li><a target="_blank" href="https://www.linkedin.com/in/kunjal-panchal" className="lined-link" activeClassName="active"> <Linkedin /> <span> LinkedIn </span> </a></li>  
               {/* <li><a href="mailto:kunjalspanchal@gmail.com" className="lined-link" activeClassName="active"> <Mail /> <span> Email </span> </a></li>   */}
               {/* <li><Link to="/blog" className="lined-link" activeClassName="active"> <Feather /> <span> Blog </span> </Link></li> */}
             </NavbarList>
