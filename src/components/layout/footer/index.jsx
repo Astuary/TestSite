@@ -20,18 +20,18 @@ const Footer = () => {
 							))}
 						</FooterSocialMedia>
 						<div>
-							<p className="text-primary quote"> Ready to take the next step and work together? </p>
+							<p className="text-primary quote" style={{textAlign: 'justify'}}> Stay updated on my literary quest.</p>
 							<ButtonDefault href={`mailto:${data.SiteContact.email}`}> Contact me </ButtonDefault>
 						</div>
 					</FooterBody>
 					<div className="box">
-						<SubRight> Good design doesn't date. Bad design does. </SubRight>
+						<SubRight> The best time to <b className="text-primary lined-link">plant a tree</b> was 20 years ago. The second best time is <b className="text-primary lined-link">now</b>. </SubRight>
 						<CopyRight className="text-dark">
 							© 
 							<span> {new Date().getFullYear()}, Built with {` `} 
 								<a href="https://www.gatsbyjs.org">Gatsby</a>{" "}
-          		</span> 
-							Copyright 2020 by {data.SiteAuthor} </CopyRight>
+          					</span> 
+							Copyright 2022 by {data.SiteAuthor} </CopyRight>
 					</div>
 				</ContainerLayout>
 			</FooterStyle>

@@ -58,8 +58,8 @@ export const data = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
-        description,
-        time,
+        description
+        
 
       }
     }

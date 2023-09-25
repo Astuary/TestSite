@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
-import {Tag, ContainerLayout, WorkPost, Category, Intro, SubTitle, Title, Text} from "../components/common"
+import {Tag, ContainerLayout, WorkPost, Category, Intro, SubTitle, Title, Text, Period} from "../components/common"
 
 const WorkIndex = ({ data }) => {
   const works = data.allMarkdownRemark.edges
@@ -11,12 +11,12 @@ const WorkIndex = ({ data }) => {
   return (
     <>
       <Layout> 
-        <SEO title="Showcases" />
+        <SEO title="Work Experience" />
         <Intro>
           <ContainerLayout>
 
             <SubTitle className="text-dark">
-              Selected Work
+              Professional Work Experience
             </SubTitle>
 
             <ContainerLayout className="wrapper">
@@ -33,7 +33,11 @@ const WorkIndex = ({ data }) => {
                     </div>
                     <div className="content">
                       <header>
-                        <Category>{node.frontmatter.category}</Category>
+                        <div>
+                          {node.frontmatter.categories.map((tag, index) => (<Category key={index}>{tag}</Category>))}
+                        </div><br/>
+                        <Period>{node.frontmatter.period}</Period>
+                        {/* <Category>{node.frontmatter.category}</Category> */}
                         <Title>
                           <Link className="text-primary lined-link" style={{ boxShadow: `none` }} to={node.fields.slug}>
                             {title}
@@ -87,7 +91,8 @@ export const pageQuery = graphql`
               }
             }
             tags
-            category
+            categories
+            period
             description
           }
         }

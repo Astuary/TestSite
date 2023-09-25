@@ -16,37 +16,9 @@ export const ArticlePost = styled.article`
   padding-bottom: 1rem;
   max-width: 60rem;
   margin: auto;
-  text-align: left;
+  text-align: center;
   img[src$="imgresponsive"] {
     max-width:80%;
-  }
-  table th {
-      background: #e5e5e5;
-  }
-  table th, table td {
-      border: 1px solid;
-      padding: 9px;
-  }
-  ul {
-    line-height: 29px;
-    li u {
-      color: #18b31e;
-      font-size: 1.1rem;
-    }
-  }
-  code {
-    background: #f1f1f1;
-    display: block;
-    padding: 14px;
-    font-size: 0.9rem;
-    color: #000;
-    border-bottom: 3px solid #e5e5e5;
-    border-radius: 5px;
-    hyphens: none;
-    line-height: 1.5;
-    overflow-x: auto;
-    padding: 1rem 2rem;
-    white-space: pre;
   }
 `
 export const SmallText = styled.small`
@@ -60,8 +32,8 @@ export const SmallText = styled.small`
 export const ArticleBody = styled.div `
   margin-top: 5rem;
   p {
-    font-size: 1rem;
-    font-family: "GT-Walsheim-Pro-Regular";
+    font-size: 1.5rem;
+    font-family: "GT-Walsheim-Pro-Medium";
   }
 `
 

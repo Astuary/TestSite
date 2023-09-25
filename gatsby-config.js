@@ -3,7 +3,7 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 module.exports = {
-  pathPrefix: "/TestSite",
+  pathPrefix: "/Kunjal",
   siteMetadata: {
     title: data.SiteTitle,
     description: data.SiteDescription,
@@ -14,18 +14,32 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `blog`,
+    //     path: `${__dirname}/src/data/blog`,
+    //   },
+    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `blog`,
-        path: `${__dirname}/src/data/blog`,
+        name: `portfolio`,
+        path: `${__dirname}/src/data/works`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `portfolio`,
-        path: `${__dirname}/src/data/works`,
+        path: `${__dirname}/src/data/education`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `portfolio`,
+        path: `${__dirname}/src/data/research`,
       },
     },
     {

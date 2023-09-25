@@ -14,24 +14,23 @@ export const HeaderIntro = styled.header`
 `
 export const Title = styled.h1`
   font-family: "GT-Walsheim-Pro-Bold";
-  font-size: 1.5rem;
-  margin: .5rem auto;
+  font-size: 2rem;
   text-transform: capitalize;
   @media(max-width: ${variables.breakpointPhone}) {
     font-size: 1.5rem;
   }
 `
 export const SubTitle = styled.h3`
-  font-size: 1rem;
+  font-size: 2rem;
   text-transform: capitalize;
   font-family: "GT-Walsheim-Pro-Bold";
-  line-height: 1.6rem;
+  text-decoration: underline;
 `
 export const Text = styled.p`
-  font-size: .88rem;
+  font-size: .98rem;
   line-height: 2;
-  color: #605f5f;
-  margin-top: 1rem;
+  color: #000000;
+  margin-top: 2rem;
   text-align: justify;
   @media(max-width: ${variables.breakpointPhone}) {
     margin-top: 1rem;
@@ -45,13 +44,10 @@ export const SubText = styled.p`
 `
 
 export const SmallText = styled.small`
-  font-size: .79rem;
+  font-size: .89rem;
   padding-right: 10px;
   > span {
     padding-left: 5px;
-  }
-  > a {
-    color: #c4c6c7
   }
   @media(max-width: ${variables.breakpointPhone}) {
     font-size: .6rem;
@@ -60,10 +56,50 @@ export const SmallText = styled.small`
 
 export const WorkPost = styled.article`
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 5fr;
   align-items: center;
-  margin-bottom: 1rem;
-  border-bottom: 2px dotted #e9e9e9;
+  margin-bottom: 5rem;
+  @media(max-width: ${variables.breakpointPhone}) {
+    grid-template-columns: 1fr;
+    border: 10px solid #fff;
+    border-radius: .9rem;
+    box-shadow: 0 17px 56px rgba(125,127,129,.17);
+	}
+  > div.content {
+    padding: 2rem 3rem;
+    @media(max-width: ${variables.breakpointPhone}) {
+      padding: 1rem 1rem;
+    }
+  }
+  > div.media {
+    text-align: center;
+    > .image-wrapper {
+      margin-top: 0rem;
+      max-width: 100px;
+      max-height: 100px;
+      overflow: hidden;
+      @media(min-width: ${variables.breakpointPhone}) {
+        border: 10px solid #ffd0d2;
+        border-radius: .9rem;
+        box-shadow: 0 17px 56px rgba(125,127,129,.17);
+      }
+      > a > div {
+        transition: all 800ms ease-in-out;
+      }
+    }
+  }
+  &:hover {
+    cursor: pointer;
+    > div.media > .image-wrapper > a > div {
+      transform: scale(1) rotate(360deg);
+    }
+  }
+`
+
+export const ResearchPost = styled.article`
+  display: grid;
+  align-items: center;
+  margin-bottom: 5rem;
   @media(max-width: ${variables.breakpointPhone}) {
     grid-template-columns: 1fr;
     border: 10px solid #fff;
@@ -80,10 +116,11 @@ export const WorkPost = styled.article`
     text-align: center;
     > .image-wrapper {
       margin-bottom: .5rem;
-      max-height: 200px;
+      max-width: 100px;
+      max-height: 100px;
       overflow: hidden;
       @media(min-width: ${variables.breakpointPhone}) {
-        border: 10px solid #fff;
+        border: 10px solid #ffd0d2;
         border-radius: .9rem;
         box-shadow: 0 17px 56px rgba(125,127,129,.17);
       }
@@ -100,7 +137,6 @@ export const WorkPost = styled.article`
   }
 `
 
-
 export const Category = styled.span`
   font-family: "GT-Walsheim-Pro-Bold";
   color: ${variables.primary};
@@ -111,4 +147,21 @@ export const Category = styled.span`
   padding: .5rem 1rem;
   margin-right: 1rem;
   border: 3px solid ${variables.primary};
+`
+
+export const Period = styled.span`
+  font-family: "GT-Walsheim-Pro-Medium";
+  color: ${variables.darkGrey };
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  font-size: 1.2em;
+  float: right;
+`
+
+export const Venue = styled.span`
+  font-family: "GT-Walsheim-Pro-Medium";
+  color: ${variables.darkGrey };
+  letter-spacing: .05em;
+  font-size: 1.2em;
+  float: left;
 `

@@ -1,10 +1,11 @@
 module.exports = {
-  SiteTitle: 'Abdelali',
+  Site: 'https://github.com/Astuary',
+  SiteTitle: 'Kunjal Panchal',
   Sitelogo: '#',
-  SiteLogoText: 'Abdelali',
-  SiteAuthor: 'Abdelali Dahir',
-  SiteDescription: 'Full Stack Developer',
-  defaultDescription: 'Software engineer!', 
+  SiteLogoText: 'Kunjal',
+  SiteAuthor: 'Kunjal Panchal',
+  SiteDescription: 'Kunjal Panchal - PhD Student',
+  defaultDescription: 'Kunjal Panchal - Portfolio', 
   githubApiQuery: `query ($number_of_repos: Int!) {
     viewer {
       name
@@ -42,9 +43,9 @@ module.exports = {
     number_of_repos: 12,
   }, 
   SiteSocialLinks: {
-    twitter: 'https://twitter.com/AbdaliDahirr',
-    github: 'https://github.com/AbdaliDahir',
-    linkedin: 'https://www.linkedin.com/in/abdelali-dahir-0b5344111/',
+    // twitter: 'https://twitter.com/AbdaliDahirr',
+    github: 'https://github.com/Astuary',
+    linkedin: 'https://www.linkedin.com/in/kunjal-panchal/',
   },
   SiteAddress: {
     city: 'Casablanca',
@@ -53,8 +54,8 @@ module.exports = {
     zipCode: 'ZipCode',
   },
   SiteContact: {
-    email: 'abdali.dahir@gmail.com',
+    email: 'kunjalspanchal@gmail.com',
     phone: 'phone number',
   },
-  SiteCopyright: '2020',
+  SiteCopyright: '2023',
 };
